@@ -1,0 +1,199 @@
+body.hidden{
+    overflow: hidden;
+}
+// header
+.header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding: 0 2%;
+    width: 100%;
+    height: 5rem;
+    color: $color-wh;
+    font-weight: 300;
+    z-index: 10;
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        background: linear-gradient(180deg,#0f0f0f 0,hsla(0,0%,6%,0));
+        width: 100%;
+        height: 5rem;
+    }
+
+    //nav menu
+
+    .gnb-inner{
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: $bg-bk;
+        display: none;
+        .fx1{
+            display: flex;
+            flex-grow: 1;
+        }
+    }
+    .btn-gnb{ 
+        display: flex;
+        height: 36px;
+        width: 84px;
+            &:hover {
+                .btn-burger{
+                    background: $bg-wh;
+                    .line{
+                        background:$bg-bk;
+                    }
+                }
+            }
+    }
+    .btn-gnb.on{
+        .btn-m{
+            transform: rotate(-5deg) translate3d(-0.3rem,0,0);
+        }
+        .btn-burger{
+            transform: rotate(5deg) translate3d(0.3rem,0,0);
+            .burger-inner{
+                position: relative;
+                margin-bottom: 5px;
+            }
+            .line:first-child{
+                position: absolute;
+                top: 5px;
+                transform: rotate(45deg);
+            }
+            .line:last-child{
+                margin-top: 5px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .btn-m{
+        align-items: center;
+        border: 1px solid $color-wh;
+        border-radius: 100px 0 0 100px;
+        display: flex;
+        flex: 0 0 50%;
+        justify-content: center;
+        height: 100%;
+        padding-top: 5px;
+        padding-left: 4px;
+        transition: transform 1s cubic-bezier(.19,1,.22,1),border-color .15s linear,color .15s linear;
+        will-change: transform;
+    }
+    .btn-burger{
+        align-items: center;
+        border: 1px solid $color-wh;
+        border-radius: 0 100px 100px 0;
+        display: flex;
+        flex: 0 0 calc(50% + 1px);
+        justify-content: center;
+        left: -1px;
+        padding-right: 4px;
+        height: 100%;
+        position: relative;
+        transition: transform 1s cubic-bezier(.19,1,.22,1),border-color .15s linear,background .15s linear;
+        will-change: transform;
+        .line{
+            background: $bg-wh;
+            content: "";
+            display: block;
+            height: 1px;
+            transition: transform 1s cubic-bezier(.19,1,.22,1),background .15s linear;
+            width: 14px;
+            will-change: transform;
+        }
+        .line + .line{margin-top: 9px;}
+    }
+    .sns-list{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        width: 20%;
+        padding: 12% 0  0 3%;
+        border-right: 1px solid hsla(0,0%,100%,.08);
+    }
+    .sns-item{
+        transition: 0.2s;
+        &::after{
+            content: '';
+            display: block;
+            width: 0%;
+            height: 1px;
+            background: $bg-wh;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        &:hover::after{
+            width: 100%;
+            opacity: 1;
+        }
+        a{
+            font-weight: 300;
+        }
+    }
+    .gnb-list{
+        font-size: 70px;
+        line-height: 1;
+        font-weight: 400;
+    }
+    .gnb-item{
+        padding: 20px 0;
+        a{
+            color: #ffffff8a;
+            transition: 0.3s;
+            &:hover{
+                color: $color-wh;
+            }
+    }
+    }
+    .pill-area {
+        padding-right: 6%;
+        .img-wrap{
+        visibility: hidden;
+        }
+        .img-wrap.on {
+        visibility: visible;
+        }
+    }
+}
+@media (max-width:500px){
+    .header{
+        padding: 0 20px;
+        .logo{
+            width: 80px;
+        }
+        .btn-gnb{
+            height: 26px;
+            width: 54px;
+            font-size: 14px;
+        }
+        .btn-burger {
+            .line{
+            width: 11px;
+            & + .line{
+                margin-top: 5px;
+            }
+        }
+    }
+    .gnb-list{
+        flex: 1;
+        padding:12% 0 0 12%;
+        font-size: 32px;
+    }
+    .gnb-item{
+        & + .gnb-item{
+            margin-top: 40px;
+        }
+    }
+    }
+}

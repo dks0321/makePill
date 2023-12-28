@@ -1,0 +1,40 @@
+/* footer*/
+.footer{
+    color: $color-wh;
+   background: $bg-bk;
+    .inner{
+    display: flex;
+    justify-content: space-between;
+    padding:60px;
+}
+.info{
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+.col-left{
+    font-weight: 300;
+    color: $color-wh;
+    h2{
+        opacity: 0.48;
+    }
+}
+.col-right{
+    text-align: right;
+    font-weight: 300;
+    color: $color-wh;
+}
+
+}
+
+@media (max-width:500px){
+    .footer{
+        .inner{
+            padding: 40px;
+            font-size: 14px;
+        }
+        .info{
+            margin-top: 0;
+        }
+    }
+}
