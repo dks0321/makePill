@@ -114,9 +114,9 @@ gsap.to('.sc-award  .group-award',{
         start:"0 20%",
         end:"100% 0%",
         scrub:1,
-        //markers:true,
+        // markers:true,
     },
-    y:100,
+    y:20,
 })
 
 //sc-sns 
