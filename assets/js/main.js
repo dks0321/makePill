@@ -174,11 +174,11 @@ $('.sc-contact .txt-area').hover(function(){
     $('body').addClass('mousehide');
     gsap.to($(this).find('.headline'),{y:10})
     gsap.to($(this).find('.sub-tit'),{y:-10})
-    gsap.to($('.video-grea'),{rotation:45})
+    gsap.to($('.video-area'),{rotation:45})
 },function(){
     mousecontact.reverse()
     $('body').removeClass('mousehide');
     gsap.to($(this).find('.headline'),{y:0})
     gsap.to($(this).find('.sub-tit'),{y:0})
-    gsap.to($('.video-grea'),{rotation:0})
+    gsap.to($('.video-area'),{rotation:0})
 })
