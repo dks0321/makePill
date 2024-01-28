@@ -1,22 +1,11 @@
-$('.sc-start .group-txt .evt-txt').mouseover(function(){
-    $('body').addClass('overlay')
-})
-$('.sc-start .group-txt .evt-txt').mouseleave(function(){
-    $('body').removeClass('overlay')
-})
-
 
 history.scrollRestoration = "manual";
 
-
 const lenis = new Lenis()
-
 lenis.on('scroll', ScrollTrigger.update)
-
 gsap.ticker.add((time)=>{
   lenis.raf(time * 1000)
 })
-
 gsap.ticker.lagSmoothing(0)
 
 //gnb menu
@@ -30,7 +19,6 @@ $('.btn-gnb').click(function(){
 
     $(this).toggleClass('on');
     $('.gnb-inner').stop().slideToggle()
-    // $('body').toggleClass('hidden')
 })
 
 //sc-start 
@@ -42,6 +30,7 @@ ScrollTrigger.create({
     scrub:1,
     toggleClass:{targets:".inner",className:"on"}
 })
+
 //text opacity
 gsap.to('.sc-start  .group-txt',{
     scrollTrigger:{
@@ -79,8 +68,6 @@ ScrollTrigger.create({
     toggleClass:{targets:"body",className:"white"}
 })
 
-
-
 ScrollTrigger.create({
     trigger:".sc-culture",
     start:"0 10%",
@@ -101,20 +88,6 @@ ScrollTrigger.create({
      toggleClass:{targets:".group-video",className:"on"}
 })
 
-// $('.project-item').hover(function(){
-//     gsap.from('.sc-project .work-box > *',{
-//         scrollTrigger:{
-//             trigger:".sc-project .work-boxt",
-//             start:"0 90%",
-//             end:"100% 0%",
-//             // markers:true,
-//         },
-//         opacity:1,
-//         stagger:0.1,
-//     })
-// },function(){})
-
-
 //out clients swiper
 const clientrSlide = new Swiper('.sc-client .swiper', {
     autoplay: {
@@ -133,7 +106,6 @@ ScrollTrigger.create({
     start:"0 10%",
     end:"100% 0%",
     scrub:1,
-    //markers: "true",
     toggleClass:"on"
 })
 gsap.to('.sc-award  .group-award',{
@@ -162,28 +134,6 @@ $('.sns-item').hover(function(){
     $(this).find('.info-area').css('transform', 'translateY(100%)');
 })
 
-
-//custom cursor
-
-// let mouseCursor = document.querySelector(".custom-cursor");
-//   //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
-//   window.addEventListener("scroll", cursor);
-//   window.addEventListener("mousemove", cursor);
-
-//   // 초기 커서 위치 설정
-// cursor({ clientX: 0, clientY: 0 });
-
-//   //커스텀 커서의 left값과 top값을 커서의 XY좌표값과 일치시킴
-//   function cursor(e) {
-//         mouseCursor.style.left = e.clientX + "px";
-//         mouseCursor.style.top = e.pageY + "px";
-//     }
-
-
-
-
-
-
 //hover btn
 gsap.set($('.btn-service .hover span'),{scale:0})
 $('.btn-service').mousemove(function(e){
@@ -203,36 +153,6 @@ $('.btn-service').mouseleave(function(){
     $(this).find('.txt').css('color', '#0f0f0f');
 })
 
-//sc-project hover
-// gsap.set($('.btn-project .hover span'),{scale:0})
-// gsap.set($('.btn-project .txt'),{scale:0})
-
-// $('.project-item').mousemove(function(e){
-//     gsap.to($(this).parent().siblings().find('.hover span'),{
-//         scale:1,
-//         x:(e.offsetX-$(this).width()),
-//         y:(e.offsetY-$(this).height())
-//     })
-//     gsap.to('.btn-project  .txt',{
-//         scale:1,
-//         x:(e.offsetX-$(this).width()),
-//         y:(e.offsetY-$(this).height())
-//     })
-// })
-// $('.project-item').mouseleave(function(){
-//     gsap.to($(this).parent().siblings().find('.hover span'),{
-//         scale:0,
-//         x:0,
-//         y:0
-//     })
-//     gsap.to('.btn-project  .txt',{
-//         scale:0,
-//         x:0,
-//         y:0
-//     })
-// })
-
-
 //sc-contact
 gsap.set('.btn-contact',{ scale:0,})
 mousecontact = gsap.to('.btn-contact',{ scale:1,paused:true,})
@@ -248,23 +168,17 @@ $(document).mousemove(function(e){
     })
 })
 
-$('.sc-contact').hover(function(){
+//contact mouse cursor event
+$('.sc-contact .txt-area').hover(function(){
     mousecontact.play()
     $('body').addClass('mousehide');
-},function(){
-    mousecontact.reverse()
-    $('body').removeClass('mousehide');
-})
-
-$('.txt-area').mousemove(function(e){
     gsap.to($(this).find('.headline'),{y:10})
     gsap.to($(this).find('.sub-tit'),{y:-10})
     gsap.to($('.video-grea'),{rotation:45})
-    
-})
-$('.txt-area').mouseleave(function(){
+},function(){
+    mousecontact.reverse()
+    $('body').removeClass('mousehide');
     gsap.to($(this).find('.headline'),{y:0})
     gsap.to($(this).find('.sub-tit'),{y:0})
     gsap.to($('.video-grea'),{rotation:0})
-   
 })

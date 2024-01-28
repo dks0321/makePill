@@ -184,12 +184,12 @@ body.hidden {
   background: #0f0f0f;
 }
 .header .btn-gnb.on .btn-m {
-  -webkit-transform: rotate(-5deg) translate3d(-0.3rem, 0, 0);
-          transform: rotate(-5deg) translate3d(-0.3rem, 0, 0);
+  -webkit-transform: rotate(-5deg) translate3d(-4px, 0, 0);
+          transform: rotate(-5deg) translate3d(-4px, 0, 0);
 }
 .header .btn-gnb.on .btn-burger {
-  -webkit-transform: rotate(5deg) translate3d(0.3rem, 0, 0);
-          transform: rotate(5deg) translate3d(0.3rem, 0, 0);
+  -webkit-transform: rotate(5deg) translate3d(4px, 0, 0);
+          transform: rotate(5deg) translate3d(4px, 0, 0);
 }
 .header .btn-gnb.on .btn-burger .burger-inner {
   position: relative;
@@ -551,19 +551,6 @@ body.hidden {
   font-size: 28px;
   font-weight: 400;
   line-height: 1;
-}
-.overlay .sc-start .group-txt .sub-tit {
-  color: #000;
-}
-.sc-start .group-txt .evt-txt {
-  display: inline-block;
-  position: relative;
-  z-index: 50;
-}
-.overlay .sc-start .group-txt .evt-txt {
-  color: #fff;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
 }
 
 .sc-intro .video-area {
@@ -1027,7 +1014,7 @@ body.hidden {
     max-width: 1000px;
   }
   .sc-start {
-    height: auto;
+    height: 100vh;
     padding: 300px 0;
   }
   .sc-start .group-txt .txt {

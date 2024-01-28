@@ -125,19 +125,8 @@
             font-size: 28px;
             font-weight: 400;
             line-height: 1;
-            .overlay &{color: #000;}
-        }
-        .evt-txt{
-            display: inline-block;
-            position: relative;
-            z-index: 50;
-            .overlay &{color: #fff;
-                transform: translateY(-10px);
-            }
+        }      
     }
-            
-    }
-
 }
 
 //sc-intro
@@ -532,7 +521,7 @@
         max-width: 1000px;
     }
     .sc-start {
-        height: auto;
+        height: 100vh;
         padding: 300px 0;
         .group-txt{
             .txt{

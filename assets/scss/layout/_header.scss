@@ -56,10 +56,10 @@ body.hidden{
     }
     .btn-gnb.on{
         .btn-m{
-            transform: rotate(-5deg) translate3d(-0.3rem,0,0);
+            transform: rotate(-5deg) translate3d(-4px,0,0);
         }
         .btn-burger{
-            transform: rotate(5deg) translate3d(0.3rem,0,0);
+            transform: rotate(5deg) translate3d(4px,0,0);
             .burger-inner{
                 position: relative;
                 margin-bottom: 5px;
@@ -106,7 +106,7 @@ body.hidden{
             content: "";
             display: block;
             height: 1px;
-            transition: transform 1s cubic-bezier(.19,1,.22,1),background .15s linear;
+            transition: transform 1s cubic-bezier(.19,1,.22,1), background .15s linear;
             width: 14px;
             will-change: transform;
         }
