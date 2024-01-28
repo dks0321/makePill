@@ -298,38 +298,6 @@
         background-color: #b8ff56;
     }
 }
-
-//sc-culture
-.sc-culture{
-    color: $color-wh;
-    background: $bg-bk;
-    z-index: 10;
-    transition: background-color .3s;
-    &.on{
-        background: $bg-wh;
-        color: $color-bk;
-    }
-    .inner{
-        display: flex;
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-    }
-    .col-left{
-        flex: 1;
-    }
-    .explain-wrap{
-        em{
-            font-size: 2.5rem;
-        }
-    }
-    .col-right{
-        flex: 1;
-    }
-    .video-area{
-        padding-top: 6rem;
-    }
-}
-
 //sc-client
 .sc-client{
     background: #fff;
@@ -339,7 +307,7 @@
     }
     .category{
         display: block;
-        margin-bottom: 2rem;
+        margin-bottom: 24px;
     }
     .swiper{
         overflow: inherit;
@@ -614,6 +582,7 @@
             font-size: 60px;
         }
         .work-box{
+            margin-top: 10px;
             opacity: 1;
          span{
             font-size: 12px;
@@ -717,7 +686,7 @@
         }
         .project-tit{
             width: 100%;
-            font-size: 30px;
+            font-size: 24px;
         }
         .work-box{
          span{
@@ -726,13 +695,20 @@
     }
     }
     .sc-client {
+        .inner{
+            padding: 20px 40px;
+        }
+        .category{
+            margin-bottom: 8px;
+        }
         .client-list { 
             li{
-                font-size: 26px;
+                font-size: 18px;
         }
     }
 }
 .sc-award {
+    background: #000;
     .inner{
         flex-direction: column;
         padding: 40px 20px;
@@ -755,7 +731,7 @@
         font-size: 20px;
     }
     .inner{
-        padding: 60px 0;
+        padding: 20px 0;
     }
 }
 .sc-contact {

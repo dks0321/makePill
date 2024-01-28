@@ -746,41 +746,6 @@ body.hidden {
   background-color: #b8ff56;
 }
 
-.sc-culture {
-  color: #fff;
-  background: #0f0f0f;
-  z-index: 10;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-.sc-culture.on {
-  background: #fff;
-  color: #0f0f0f;
-}
-.sc-culture .inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-.sc-culture .col-left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.sc-culture .explain-wrap em {
-  font-size: 2.5rem;
-}
-.sc-culture .col-right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.sc-culture .video-area {
-  padding-top: 6rem;
-}
-
 .sc-client {
   background: #fff;
   overflow: hidden;
@@ -790,7 +755,7 @@ body.hidden {
 }
 .sc-client .category {
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 24px;
 }
 .sc-client .swiper {
   overflow: inherit;
@@ -1088,6 +1053,7 @@ body.hidden {
     font-size: 60px;
   }
   .sc-project .work-box {
+    margin-top: 10px;
     opacity: 1;
   }
   .sc-project .work-box span {
@@ -1180,13 +1146,22 @@ body.hidden {
   }
   .sc-project .project-tit {
     width: 100%;
-    font-size: 30px;
+    font-size: 24px;
   }
   .sc-project .work-box span {
     font-size: 12px;
   }
+  .sc-client .inner {
+    padding: 20px 40px;
+  }
+  .sc-client .category {
+    margin-bottom: 8px;
+  }
   .sc-client .client-list li {
-    font-size: 26px;
+    font-size: 18px;
+  }
+  .sc-award {
+    background: #000;
   }
   .sc-award .inner {
     -webkit-box-orient: vertical;
@@ -1211,7 +1186,7 @@ body.hidden {
     font-size: 20px;
   }
   .sc-sns .inner {
-    padding: 60px 0;
+    padding: 20px 0;
   }
   .sc-contact {
     padding: 40px;
